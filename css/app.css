@@ -7,57 +7,8 @@
   font-weight: normal;
   font-style: normal;
 }
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?77410305#fontello') format('svg');
-  }
-}
-*/
 
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: 0.2em;
-  text-align: center;
-/* opacity .8 */
-/* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-/* Animation center compensation - magrins should be symmetric */
-/* remove if not needed */
-  margin-left: 0.2em;
-/* you can be more comfortable with increased icons size */
-/* font-size: 120%; */
-/* Uncomment for 3D effect */
-/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
-
-.icon-pause:before { content: '\2389'; } /* '⎉' */
-.icon-next:before { content: '\23e9'; } /* '⏩' */
-.icon-prev:before { content: '\23ea'; } /* '⏪' */
-.icon-play:before { content: '\25b6'; } /* '▶' */
-.icon-heart:before { content: '\2665'; } /* '♥' */
-.icon-mail:before { content: '\2709'; } /* '✉' */
-.icon-retweet:before { content: '\e717'; } /* '' */
-.icon-cc:before { content: '\e7a5'; } /* '' */
-.icon-cc-by:before { content: '\e7a6'; } /* '' */
-.icon-cc-nc:before { content: '\e7a7'; } /* '' */
-.icon-github:before { content: '\f300'; } /* '' */
-.icon-twitter:before { content: '\f309'; } /* '' */
-.icon-facebook:before { content: '\f30c'; } /* '' */
-.icon-gplus:before { content: '\f30f'; } /* '' */
-.icon-shuffle:before { content: '🔀'; } /* '\1f500' */
-
-
+/* --- Styling & UI --- */
 body{
     background: url('/css/asset/bg.png') repeat #ebe6de;
     font-size: 10px;
@@ -67,16 +18,51 @@ body{
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #666;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: #f24747;
+}
+a.active{color:#f24747;}
+a.active:not(.toggle) {cursor: default;}
+
+.control.icon a{color: #222; padding: 0 15px;}
+.control.icon a:hover {color:#f24747; text-shadow: 0 0 3px #f24747;}
+.control.icon a.active{color:#f24747;}
+
+nav a {color: #222; margin:5px 50px 5px 0;}
+nav a:hover {}
+
+ul.unstyled {list-style:none;}
+blockquote {
+    quotes:"\201C""\201D""\2018""\2019";
+    margin: 2em 0;
+}
+
+blockquote:before { content: open-quote;}
+blockquote:after {content: close-quote;}
+
+.control.icon {padding: .8em 0; border-bottom:dotted 1px #f24747;}
+
+h1, blockquote, .icon {text-shadow: 0px 1px 0px #fff;}
+
 .wrapper {
     background: url('/css/asset/pattern.png') 0px -10px repeat-x;
 }
-.wrapper>footer {
+footer {
     background: url('/css/asset/pattern.png') top repeat-x;
     padding: 22px 0 10px 0;
 }
 
-.contraline {
+.thickline {
     border-top: solid 4px #111;
+}
+.thinline {
     border-bottom: solid 1px #111;
 }
 
@@ -139,7 +125,7 @@ article {padding-bottom: 4em;}
 .wrapper {max-width: 900px; width: 90%; margin: 0 auto; padding: 35px 0 0 0;}
 .row {width:100%;}
 header {margin: 0; padding:0;}
-article footer .metadata {float:left;}
+.metadata {float:left;}
 .social.icon {float: right;}
 .social.icon li {float: left;}
 .social.icon li:not(:last-of-type) {margin-right: 30px;}
@@ -153,39 +139,79 @@ footer .copyright {float: right; margin: 5px 0;}
     clear: both;
 }
 
-/* --- Styling & UI --- */
-a {
-    text-decoration: none;
-    color: #666;
-    display: inline-block;
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?77410305#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+/* opacity .8 */
+/* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+/* Animation center compensation - magrins should be symmetric */
+/* remove if not needed */
+  margin-left: 0.2em;
+/* you can be more comfortable with increased icons size */
+/* font-size: 120%; */
+/* Uncomment for 3D effect */
+/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-a:hover, a:active {
-    text-decoration: none;
-    color: #f24747;
+.icon-pause:before { content: '\2389'; } /* '⎉' */
+.icon-next:before { content: '\23e9'; } /* '⏩' */
+.icon-prev:before { content: '\23ea'; } /* '⏪' */
+.icon-play:before { content: '\25b6'; } /* '▶' */
+.icon-heart:before { content: '\2665'; } /* '♥' */
+.icon-mail:before { content: '\2709'; } /* '✉' */
+.icon-retweet:before { content: '\e717'; } /* '' */
+.icon-cc:before { content: '\e7a5'; } /* '' */
+.icon-cc-by:before { content: '\e7a6'; } /* '' */
+.icon-cc-nc:before { content: '\e7a7'; } /* '' */
+.icon-github:before { content: '\f300'; } /* '' */
+.icon-twitter:before { content: '\f309'; } /* '' */
+.icon-facebook:before { content: '\f30c'; } /* '' */
+.icon-gplus:before { content: '\f30f'; } /* '' */
+.icon-shuffle:before { content: '🔀'; } /* '\1f500' */
+
+
+@media (min-width: 850px) {
+  
+  .app {
+    position: relative;
+    height: 100%;
+  }
+  .app section {
+    position: relative;
+    min-height: 100%;
+    vertical-align: middle;
+    height: 100%; 
+  }
+  .stickBottom {
+    background: url('/css/asset/bg.png') repeat #ebe6de;
+    position: fixed;
+    bottom: 0;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto; 
+  }
 }
-a.active{color:#f24747;}
-a.active:not(.toggle) {cursor: default;}
 
-.control.icon a{color: #222; padding: 0 15px;}
-.control.icon a:hover {color:#f24747; text-shadow: 0 0 3px #f24747;}
-.control.icon a.active{color:#f24747;}
-
-nav a {color: #222; margin:5px 50px 5px 0;}
-nav a:hover {}
-
-ul.unstyled {list-style:none;}
-blockquote {
-    quotes:"\201C""\201D""\2018""\2019";
-    margin: 2em 0;
-}
-
-blockquote:before { content: open-quote;}
-blockquote:after {content: close-quote;}
-
-.control.icon {padding: .8em 0; border-bottom:dotted 1px #f24747;}
-
-h1, blockquote, .icon {text-shadow: 0px 1px 0px #fff;}
 
 @media (max-width: 850px) {
     nav {
