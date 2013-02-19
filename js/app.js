@@ -1,4 +1,9 @@
-(function($) {    
+(function($) {
+    
+    //this will the init function later
+    var quoteID = 0;
+    
+    
     $(".controller .icon-shuffle").click(function(e){
         e.preventDefault();
         if ($(this).hasClass("active")) {
@@ -22,6 +27,22 @@
         };
     });
     
+    $(".controller .icon-next").click(function(e){
+        e.preventDefault(); 
+        if (quoteID < quotes.length-1) { quoteID += 1; } else { quoteID = 0; }
+        showQuote(quoteID);
+    });
+    
+    $(".controller .icon-prev").click(function(e){
+        e.preventDefault();
+        if (quoteID == 0 ) {quoteID = 17; } else { quoteID -= 1; }
+        showQuote(quoteID);
+    });
+    
+    
+    
+    
+    
     $(".filters a").click(toggleFilter);
     
     $(".metadata a").click(function(e){
@@ -35,6 +56,7 @@
             }
         });
     });
+
 
 
 // appControl plugin
@@ -55,8 +77,9 @@ var appControl = {
         //show previous quote
     },
     
-    next : function(){
+    next : function(n){
         //show next quote
+
     },
 
     pause : function(){
@@ -64,25 +87,6 @@ var appControl = {
     },
         
     randomPlay : function(){
-        var view = $(".app blockquote");
-                      
-        $.get('js/data/quotes.json', function(data){
-            var quotes = [];
-            var characters = ["Carrie Bradshaw", "Charlotte York", "Miranda Hobbes", "Samantha Jones"];
-            
-            view.setInterval(function(){
-                    $.each(data, function(key, val){
-                    var character = characters[parseInt(val.by)-1];
-                    var season = "Season "+ val.in;
-                    var quote = val.line;
-                    quotes.push([character, season, quote]);
-            });
-            
-            
-            
-            }, 500);
-
-        });
 
     },
     
@@ -91,6 +95,18 @@ var appControl = {
     }
 
 };
+
+function showQuote(n) {
+        var quote = quotes[n].line;
+        var chara = quotes[n].by;
+        var season = "Season" + quotes[n].inSeason;
+        
+        console.log("n = " + n +", chara = " + chara + ", season = " + season)
+        
+        $(".app .view blockquote").text(quote);
+        $(".app .metadata .by").text(chara);
+        $(".app .metadata .in").text(season);
+}
 
 function toggleFilter(e){
     e.preventDefault();

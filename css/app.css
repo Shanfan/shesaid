@@ -213,6 +213,6 @@ h1, blockquote, .icon {text-shadow: 0px 1px 0px #fff;}
 }
 
 @media (max-width: 600px){
-    .filters, .metadata {display: none;}
+    .filters, .social.icon{display: none;}
     nav {font-size: 1.2em;}
 }
