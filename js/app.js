@@ -2,10 +2,10 @@
     $(".controller .icon-shuffle").click(function(e){
         e.preventDefault();
         if ($(this).hasClass("active")) {
-            appControl.order();
+            appControl.shuffle = false;
             $(this).toggleClass("active");
         } else {
-            appControl.shuffle();
+            appControl.shuffle = true;
             $(this).toggleClass("active");
         }
     });
@@ -18,14 +18,11 @@
             appControl.pause();
         } else {
             $(this).removeClass("icon-play").addClass("icon-pause");
-            appControl.autoplay;
+            appControl.autoplay();
         };
     });
     
-    $(".filters a").click(function(e){
-        e.preventDefault();
-        $(this).toggleFilter();
-    });
+    $(".filters a").click(toggleFilter);
     
     $(".metadata a").click(function(e){
         e.preventDefault();
@@ -34,58 +31,65 @@
         
         $(cat).each(function(){
             if ($(this).text() === filter) {
-                $(this).toggleFilter();
+                $(this).trigger('click');
             }
         });
     });
 
 
-$.get('js/data/quotes.json', function(data){
-    var quotes = [];
-    var characters = [
-        "Carrie Bradshaw",
-        "Charlotte York",
-        "Miranda Hobbes",
-        "Samantha Jones"
-    ];
-    $.each(data, function(key, val){
-        var character = characters[parseInt(val.by)-1];
-        var season = "Season "+ val.in;
-        var quote = val.line;
-        quotes.push([character, season, quote]);
-    });
-});
-
-//-----Utility Functions ---------
+// appControl plugin
 
 var appControl = {
+    shuffle : true,
+    
     init : function(){
+        this.shuffle = true;
         this.autoplay();
-        this.shuffle();
     },
+    
     autoplay : function(){
-        //start autoplay
+        this.shuffle ? randomPlay : orderedPlay;
     },
     
     prev : function(){
-                    //show previous quote
-                },
+        //show previous quote
+    },
     
     next : function(){
-                    //show next quote
-                },
+        //show next quote
+    },
 
     pause : function(){
-        //pause autoplay
+        this.autoplay = null;
+    },
+        
+    randomPlay : function(){
+        var view = $(".app blockquote");
+                      
+        $.get('js/data/quotes.json', function(data){
+            var quotes = [];
+            var characters = ["Carrie Bradshaw", "Charlotte York", "Miranda Hobbes", "Samantha Jones"];
+            
+            view.setInterval(function(){
+                    $.each(data, function(key, val){
+                    var character = characters[parseInt(val.by)-1];
+                    var season = "Season "+ val.in;
+                    var quote = val.line;
+                    quotes.push([character, season, quote]);
+            });
+            
+            
+            
+            }, 500);
+
+        });
+
     },
     
-    shuffle : function() {
-        //play the quotes randomly
-    },
-    
-    order : function() {
-        //play the quotes in order
+    orderedPlay : function() {
+        
     }
+
 };
 
 function toggleFilter(e){
