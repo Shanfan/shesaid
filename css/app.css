@@ -189,7 +189,7 @@ footer .copyright {float: right; margin: 5px 0;}
 .icon-gplus:before { content: '\f30f'; } /* '' */
 .icon-shuffle:before { content: '🔀'; } /* '\1f500' */
 
-
+/** fix the control to the buttom. but it's flawsy right now. **
 @media (min-width: 850px) {
   
   .app {
@@ -199,7 +199,6 @@ footer .copyright {float: right; margin: 5px 0;}
   .app section {
     position: relative;
     min-height: 100%;
-    vertical-align: middle;
     height: 100%; 
   }
   .stickBottom {
@@ -211,7 +210,7 @@ footer .copyright {float: right; margin: 5px 0;}
     margin: 0 auto; 
   }
 }
-
+*********************/
 
 @media (max-width: 850px) {
     nav {
