@@ -54,7 +54,7 @@ var allQuotes = [
   {
     "by": charas[0],
     "inSeason": 3,
-    "line": "Once you chose something – one man, one great apartment, one amazing job – another option goes away. Are we a generation of women who can’t choose just one from column A, did we all have too much to handle?"
+    "line": "Once you chose something - one man, one great apartment, one amazing job - another option goes away. Are we a generation of women who can’t choose just one from column A, did we all have too much to handle?"
   },
   {
     "by": charas[2],
@@ -254,7 +254,7 @@ var allQuotes = [
   {
     "by": charas[2],
     "inSeason": 2,
-    "line": "How does it happen that four smart women have nothing to talk about but boyfriends? It’s like seventh grade but with bank accounts. What about us? What we think, we feel, we know, Christ! Does it always have to be about them? Just give me a call when you’re ready to talk about something besides men."
+    "line": "How does it happen that four smart women have nothing to talk about but boyfriends? It’s like seventh grade but with bank accounts."
   }
 ];
 

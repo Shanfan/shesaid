@@ -4,7 +4,7 @@
     var quotes = allQuotes,
         quoteID = 0,
         timer = 5000,
-        shuffle = true,
+        shuffle = false,
         autoplay;
     
     showQuote(quoteID);
