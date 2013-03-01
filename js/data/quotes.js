@@ -255,6 +255,21 @@ var allQuotes = [
     "by": charas[2],
     "inSeason": 2,
     "line": "How does it happen that four smart women have nothing to talk about but boyfriends? It’s like seventh grade but with bank accounts."
+  },
+  {
+    "by": charas[0],
+  	"inSeason": 6,
+  	"line": "Over the years I have bought Kyra an engagement gift, a wedding gift, then there was the trip to Maine for the wedding, three baby gifts. In total, I have spent over 2,300 dollars celebrating her choices. And she is shaming me for spending a lousy 485 bucks on myself?"
+  },
+  {
+  	"by": charas[0],
+  	"inSeason": 6,
+  	"line": "If you are single, after graduation, there isn’t one occation where people celebrate you. Hallmark doesn’t make a ‘Congratulations You Didn't Marry The Wrong Guy’ card. And where’s the flatware for going on vacation alone?"
+  },
+  {  	
+    "by": charas[0],
+  	"inSeason": 6,
+  	"line": "Hi. It’s Carrie Bradshaw. I wanted to let you know that I’m getting married. To myself. I’m registered at Manolo Blahnik. So thanks. Bye."
   }
 ];
 
