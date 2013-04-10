@@ -23,27 +23,27 @@
     </header>
 
      <nav class="thinline">
-      <a href="about.html">About</a><a href="about.html">Credits</a><a href="about.html">Suggest A Quote</a>
+      <a href="about.html#about">About</a><a href="about.html#credit">Credits</a><a href="about.html#suggest">Suggest A Quote</a>
     </nav>
          
-    <article class="about thinline">
+    <article id="about" class="about">
 	<h2>About This Project</h2>
-	<p>Under Construction.</br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae felis eros, quis blandit leo. Donec hendrerit venenatis pellentesque. Sed at fermentum nulla. Vivamus a facilisis purus. Praesent urna diam, lacinia non cursus posuere, rutrum viverra erat. Curabitur lobortis lobortis velit, at blandit purus vestibulum placerat. Nulla ullamcorper pretium odio, vitae tempus erat suscipit sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-	<h3><i class="icon-cc"></i><i class="icon-cc-by"></i><i class="icon-cc-nc"></i>Attribute-NonCommercial</h3>
-	<p>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae felis eros, quis blandit leo. Donec hendrerit venenatis pellentesque. Sed at fermentum nulla. Vivamus a facilisis purus. Praesent urna diam, lacinia non cursus posuere, rutrum viverra erat. Curabitur lobortis lobortis velit, at blandit purus vestibulum placerat. Nulla ullamcorper pretium odio, vitae tempus erat suscipit sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-	<h3><i class="icon-github"></i> Fork Me On GitHub</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae felis eros, quis blandit leo. Donec hendrerit venenatis pellentesque. Sed at fermentum nulla. Vivamus a facilisis purus. Praesent urna diam, lacinia non cursus posuere, rutrum viverra erat. Curabitur lobortis lobortis velit, at blandit purus vestibulum placerat. Nulla ullamcorper pretium odio, vitae tempus erat suscipit sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> 
+	<p>“She said,” is a collection of quotes from Sex and the City TV series. For the demo I hand picked the quotes and stored them in a Javascript array, then wrote the sorting and filtering functions for display. For the final implementation I might make it into a <a href="http://www.tumblr.com/themes/" target="_blank">Tumblr theme</a>, so it could benefit from the powerful blogging platform. But things are up in the air right now.</p>
+
+	<p>The main design concern here is the fluid typography. I’d like each quote to be presented like on a flashcard. The ideal presentation shall have every quote fit right into the window. Currently there’s a function that calculate the length of each quote, then scale the font size up or down accordingly. This demo still needs some fine tuning to get a smooth result. </p>
+	
     </article>
-    <article class="credit thinline">
+    <article id="credit" class="credit">
       <h2>Credits</h2>
-      <p>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae felis eros, quis blandit leo. Donec hendrerit venenatis pellentesque. Sed at fermentum nulla. Vivamus a facilisis purus. Praesent urna diam, lacinia non cursus posuere, rutrum viverra erat. Curabitur lobortis lobortis velit, at blandit purus vestibulum placerat. Nulla ullamcorper pretium odio, vitae tempus erat suscipit sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+      <p>The flexible typography is made possible by <a href="http://fittextjs.com/" target="_blank">FitText.js</a>.</p>
+      <p><i class="icon-cc"></i><i class="icon-cc-by"></i><i class="icon-cc-nc"></i>Attribute-NonCommercial</p>
     </article>
-    <article class="suggest-a-quote thinline">
-	<h2>placeholder for submit form.</h2> 
-	<p>
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae felis eros, quis blandit leo. Donec hendrerit venenatis pellentesque. Sed at fermentum nulla. Vivamus a facilisis purus. Praesent urna diam, lacinia non cursus posuere, rutrum viverra erat. Curabitur lobortis lobortis velit, at blandit purus vestibulum placerat. Nulla ullamcorper pretium odio, vitae tempus erat suscipit sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+    <article id="suggest" class="suggest-a-quote">
+	<h2>Suggest a Quote</h2> 
+	<p>This feature will be made availabe on Tumblr, if I do take this demo further. Thank you.
+	</p>
+	<h4><a href="https://github.com/Shanfan/shesaid"><i class="icon-github"></i></a> Fork Me On GitHub</h4>
+	<p>I put this sentence here just for the "coolness". I'm not expecting anyone to fork me... :P I think I'm the only one who would carry it all the way to Tumblr. Maybe that's the difference between a designer who codes and a programmer who designs...</p> 
     </article>
     <footer class="group">
 	<p class="copyright">

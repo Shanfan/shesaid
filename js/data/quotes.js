@@ -257,7 +257,11 @@ var allQuotes = [
     "line": "How does it happen that four smart women have nothing to talk about but boyfriends? It’s like seventh grade but with bank accounts."
   },
   {
+<<<<<<< HEAD
     "by": charas[0],
+=======
+  	"by": charas[0],
+>>>>>>> Updated about page
   	"inSeason": 6,
   	"line": "Over the years I have bought Kyra an engagement gift, a wedding gift, then there was the trip to Maine for the wedding, three baby gifts. In total, I have spent over 2,300 dollars celebrating her choices. And she is shaming me for spending a lousy 485 bucks on myself?"
   },
@@ -271,7 +275,7 @@ var allQuotes = [
   	"inSeason": 6,
   	"line": "Hi. It’s Carrie Bradshaw. I wanted to let you know that I’m getting married. To myself. I’m registered at Manolo Blahnik. So thanks. Bye."
   }
-];
+]
 
 allQuotes.sort(function(a,b) {
   if (a.inSeason != b.inSeason) {
