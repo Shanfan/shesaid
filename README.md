@@ -1,7 +1,7 @@
 She Said
 =======
-Temporarily hosted on:
-http://shanfanhuang.com/shesaid/
+Demo:
+http://shanfanhuang.info/_lab/shesaid/
 
 Still up in the air:
 * Better transition in between the quotes
